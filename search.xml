@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>QQ消息防撤回</title>
+      <link href="/2023/04/17/QQ%E6%B6%88%E6%81%AF%E9%98%B2%E6%92%A4%E5%9B%9E/"/>
+      <url>/2023/04/17/QQ%E6%B6%88%E6%81%AF%E9%98%B2%E6%92%A4%E5%9B%9E/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前提须知"><a href="#前提须知" class="headerlink" title="前提须知"></a>前提须知</h2><p>首先撤回的函数在im.dll模块中,并且用户与用户之间以及群内的撤回函数不同</p><h2 id="在im-dll模块中搜索revoke，在每一个revoke上下一个断点"><a href="#在im-dll模块中搜索revoke，在每一个revoke上下一个断点" class="headerlink" title="在im.dll模块中搜索revoke，在每一个revoke上下一个断点"></a>在im.dll模块中搜索revoke，在每一个revoke上下一个断点</h2><p>通过下断点来看在消息撤回前断在哪些断点上</p><h2 id="发现断在这些断点上"><a href="#发现断在这些断点上" class="headerlink" title="发现断在这些断点上"></a>发现断在这些断点上</h2><p><img src="https://raw.githubusercontent.com/JiangYinXiang3/photo/main/Qexo/2023/4/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-04-16%20141606_54b2d4c59bd17779246bf7cf7507ebd9.jpg" alt="&#39;&#39;"></p><h2 id="直接在函数头部返回"><a href="#直接在函数头部返回" class="headerlink" title="直接在函数头部返回"></a>直接在函数头部返回</h2><p><img src="https://github.com/JiangYinXiang3/photo/raw/main/Qexo/2023/4/2_0590660d1ac0fca17da8c7eb63b768fd.jpg" alt="https://github.com/JiangYinXiang3/photo/raw/main/Qexo/2023/4/2_0590660d1ac0fca17da8c7eb63b768fd.jpg"></p><p><img src="https://github.com/JiangYinXiang3/photo/raw/main/Qexo/2023/4/3_d0a10b8e94ab13fc731bbf68060bca7a.jpg" alt="https://github.com/JiangYinXiang3/photo/raw/main/Qexo/2023/4/3_d0a10b8e94ab13fc731bbf68060bca7a.jpg"></p><p>发现是个人用户撤回2和群用户撤回3上可以阻止消息撤回</p><h2 id="效果就不演示了，自己尝试就可以了"><a href="#效果就不演示了，自己尝试就可以了" class="headerlink" title="效果就不演示了，自己尝试就可以了"></a>效果就不演示了，自己尝试就可以了</h2><h2 id="制作特征码"><a href="#制作特征码" class="headerlink" title="制作特征码"></a>制作特征码</h2><p>ce记得搜索数组的时候将可写的选项去除</p><p>个人用户撤回2的头部是在im.dll中特征码 [55 8b ec 81 EC * * * * A1 * * * * 33 c5 89 45 fc 8b 45 0c 33 c9 53 8b 5d 08 56]的第二条</p><p>群用户撤回3的头部是在im.dll中特征码[55 8b ec 81 EC * * * * A1 * * * * 33 c5 89 45 fc 8b 45 0c 33 c9 53 8b 5d 08 56]的第三条</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 逆向学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> qq防撤回 </tag>
+            
+            <tag> qq逆向 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>文章发布的细节</title>
       <link href="/2023/04/17/hello-world/"/>
       <url>/2023/04/17/hello-world/</url>
