@@ -1,1 +1,1 @@
-var posts=["2023/04/17/QQ消息防撤回/","2023/04/18/hello-world/","2023/04/18/本文的图床/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
+var posts=["2023/04/17/QQ消息防撤回/","2023/04/20/hello-world/","2023/04/18/本文的图床/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
