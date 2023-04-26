@@ -1,1 +1,1 @@
-var posts=["2023/04/17/QQ消息防撤回/","2023/04/26/hello-world/","2023/04/26/x64驱动学习(二)/","2023/04/23/微信多开/","2023/04/18/本文的图床/","2023/04/24/驱动学习一/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
+var posts=["2023/04/17/QQ消息防撤回/","2023/04/26/hello-world/","2023/04/27/x64驱动学习(三)/","2023/04/26/x64驱动学习(二)/","2023/04/23/微信多开/","2023/04/18/本文的图床/","2023/04/24/驱动学习一/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
