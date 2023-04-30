@@ -4661,6 +4661,9 @@ h1.page-title + .tag-cloud-list {
   color: #3b70fc;
   text-decoration: underline;
 }
+#post-info #post-meta time {
+  display: none;
+}
 #nav {
   position: fixed;
   -webkit-transition: border 0s, all 0s;
